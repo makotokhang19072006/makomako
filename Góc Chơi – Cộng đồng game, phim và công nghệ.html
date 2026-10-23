@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Góc Chơi – Cộng đồng game, phim và công nghệ</title>
+<style>
+:root{--bg:#eef1f6;--surface:#fff;--ink:#14213d;--muted:#5b6785;--line:#d6dbe7;--accent:#e63946;--accent-ink:#fff;--nav:#14213d;--nav-ink:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1524;--surface:#18203a;--ink:#e8ecf7;--muted:#9aa5c4;--line:#2a3558;--accent:#ff5a67;--accent-ink:#1a0a0c;--nav:#0a0f1c;--nav-ink:#e8ecf7;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1524;--surface:#18203a;--ink:#e8ecf7;--muted:#9aa5c4;--line:#2a3558;--accent:#ff5a67;--accent-ink:#1a0a0c;--nav:#0a0f1c;--nav-ink:#e8ecf7;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Be Vietnam Pro","Segoe UI",system-ui,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+header{background:var(--nav);color:var(--nav-ink)}
+.bar{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:14px 0}
+.logo{font-weight:800;font-size:1.35rem;letter-spacing:-.02em}
+.logo b{color:var(--accent)}
+nav{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+nav a{padding:6px 12px;border-radius:6px;font-size:.95rem}
+nav a:hover{background:rgba(255,255,255,.12)}
+.auth a{font-size:.9rem;padding:6px 14px;border:1px solid rgba(255,255,255,.4);border-radius:6px;margin-left:6px}
+.auth a.fill{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:600}
+.hero{padding:44px 0 28px}
+.hero h1{font-size:clamp(1.9rem,5vw,3.1rem);line-height:1.1;letter-spacing:-.03em;margin:0 0 10px;max-width:16ch}
+.hero p{color:var(--muted);margin:0 0 20px;max-width:56ch}
+.search{display:flex;gap:8px;flex-wrap:wrap;max-width:640px}
+.search select,.search input{height:46px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:0 12px;font:inherit}
+.search input{flex:1;min-width:180px}
+.search button{height:46px;padding:0 22px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:700;cursor:pointer}
+section{padding:20px 0}
+.head{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+h2{margin:0;font-size:1.4rem;letter-spacing:-.02em}
+.tabs{display:flex;gap:6px}
+.tabs button{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:7px 14px;border-radius:999px;font:inherit;font-size:.9rem;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{aspect-ratio:16/10;display:flex;align-items:end;padding:10px;color:#fff;font-weight:800;font-size:1.15rem;line-height:1.15;letter-spacing:-.01em}
+.card .body{padding:12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{margin:0;font-size:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:4px}
+.tags span{font-size:.75rem;background:var(--bg);border-radius:4px;padding:2px 7px;color:var(--muted)}
+.card p{margin:0;font-size:.85rem;color:var(--muted)}
+.card .more{margin-top:auto;font-size:.85rem;font-weight:600;color:var(--accent)}
+.cols{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:860px){.cols{grid-template-columns:2fr 1fr}}
+.forum{background:var(--surface);border:1px solid var(--line);border-radius:10px}
+.forum li{list-style:none;padding:12px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}
+.forum li:last-child{border:0}
+.forum ul{margin:0;padding:0}
+.forum small{color:var(--muted);display:block}
+.forum .n{color:var(--muted);font-size:.85rem;white-space:nowrap;text-align:right}
+.side{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.side h3{margin:0 0 8px}
+.side p{margin:0 0 12px;color:var(--muted);font-size:.9rem}
+.side a{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:9px 16px;border-radius:8px;font-weight:700;font-size:.9rem}
+footer{background:var(--nav);color:var(--nav-ink);margin-top:30px;padding:28px 0 36px;font-size:.9rem}
+footer p{margin:4px 0;opacity:.8}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap bar">
+<a class="logo" href="#">Góc<b>Chơi</b></a>
+<nav aria-label="Chính">
+<a href="#games">Game</a><a href="#phim">Phim</a><a href="#phanmem">Công nghệ</a><a href="#dien-dan">Diễn đàn</a><a href="#faq">Hỏi đáp</a>
+</nav>
+<div class="auth"><a href="#">Đăng nhập</a><a class="fill" href="#">Đăng ký</a></div>
+</div>
+</header>
+
+<div class="wrap hero">
+<h1>Nơi bàn chuyện game, phim và công nghệ.</h1>
+<p>Tra cứu thông tin, đọc đánh giá và trao đổi với cộng đồng. Mọi trang game đều dẫn tới cửa hàng chính thức.</p>
+<form class="search" onsubmit="return false" role="search">
+<select aria-label="Loại nội dung"><option>Tất cả</option><option>Game</option><option>Phim</option><option>Công nghệ</option></select>
+<input type="search" id="q" placeholder="Tìm tên game, phim…" aria-label="Từ khóa">
+<button type="button" onclick="filter()">Tìm kiếm</button>
+</form>
+</div>
+
+<main class="wrap">
+<section id="games">
+<div class="head">
+<h2>Game</h2>
+<div class="tabs" role="tablist">
+<button role="tab" aria-selected="true" data-tab="new">Mới</button>
+<button role="tab" aria-selected="false" data-tab="top">Được quan tâm</button>
+<button role="tab" aria-selected="false" data-tab="up">Cập nhật</button>
+</div>
+</div>
+<div class="grid" id="gamegrid"></div>
+<p id="empty" class="hidden" style="color:var(--muted)">Không có kết quả. Thử từ khóa khác.</p>
+</section>
+
+<section id="phim">
+<div class="head"><h2>Phim nổi bật</h2></div>
+<div class="grid" id="moviegrid"></div>
+</section>
+
+<section id="dien-dan" class="cols">
+<div>
+<div class="head"><h2>Diễn đàn</h2></div>
+<div class="forum"><ul>
+<li><div><a href="#">Cấu hình nào chạy mượt Cyberpunk 2077 ở 1080p?</a><small>Game · bởi minhkhoa</small></div><div class="n">12 trả lời<br>2 giờ trước</div></li>
+<li><div><a href="#">Cách sao lưu file save game lên đám mây</a><small>Hướng dẫn · bởi thuhien</small></div><div class="n">5 trả lời<br>hôm qua</div></li>
+<li><div><a href="#">Gợi ý phim hành động hay nhất năm nay</a><small>Phim · bởi hoangnam</small></div><div class="n">31 trả lời<br>hôm qua</div></li>
+<li><div><a href="#">Lỗi không vào được game online, ai gặp chưa?</a><small>Hỏi đáp · bởi tuananh</small></div><div class="n">3 trả lời<br>3 ngày trước</div></li>
+</ul></div>
+</div>
+<aside class="side" id="faq">
+<h3>Quy tắc cộng đồng</h3>
+<p>Chúng tôi không chia sẻ bản crack hay link tải lậu. Hãy mua game, phần mềm và phim từ nguồn chính thức để ủng hộ nhà phát triển.</p>
+<a href="#">Đọc quy tắc</a>
+</aside>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<strong>GócChơi</strong>
+<p>Cộng đồng chia sẻ thông tin giải trí và công nghệ.</p>
+<p>© 2026 GócChơi. Tên game và phim thuộc về chủ sở hữu tương ứng.</p>
+</div>
+</footer>
+
+<script>
+const games={
+new:[["Call of Duty: Modern Warfare 4","FPS · Chiến tranh","Phần mới của series bắn súng của Infinity Ward.","#14213d,#e63946"],
+["Tales of Eternia Remastered","Nhập vai · Anime","Bản làm lại của JRPG kinh điển.","#2a9d8f,#264653"],
+["Chained Beasts","Hành động · Souls-like","Chặt chém với nhịp độ khắc nghiệt.","#6a4c93,#1982c4"],
+["Ratatan","Indie · Âm nhạc","Nhập vai nhịp điệu, chơi nhiều người.","#f77f00,#d62828"]],
+top:[["ELDEN RING","Nhập vai · Thế giới mở","Game của năm 2022 từ FromSoftware.","#3a3a52,#c9a227"],
+["Grand Theft Auto 5","Hành động · Thế giới mở","Los Santos rộng lớn với ba nhân vật chính.","#2b9348,#1b4332"],
+["Cyberpunk 2077","Nhập vai · Thế giới mở","Night City của CD Projekt Red.","#ffd60a,#7209b7"],
+["Sekiro: Shadows Die Twice","Hành động · Chặt chém","Kiếm đạo ở Nhật Bản thời Sengoku.","#9d0208,#370617"]],
+up:[["METRO Last Light Redux","FPS · Kinh dị","Sinh tồn dưới lòng đất Moscow.","#2d3142,#4f5d75"],
+["Legend of Mortal","Nhập vai · Chiến thuật","Võ hiệp với hệ thống nhân vật sâu.","#386641,#a7c957"],
+["DragonSword: Awakening","Hành động · Thế giới mở","Hành trình chặt chém giả tưởng.","#0077b6,#03045e"],
+["ARK: Survival Evolved","Sinh tồn · Multiplayer","Sống sót giữa khủng long.","#588157,#344e41"]]};
+const movies=[["Avengers: Endgame","Hành động · Viễn tưởng","#5f0f40,#fb8b24"],["Your Name","Hoạt hình · Tình cảm","#4361ee,#f72585"],["Ip Man 4: The Finale","Võ thuật · Tiểu sử","#774936,#edc4b3"],["Bad Boys for Life","Hành động · Hài","#023e8a,#00b4d8"]];
+const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!==undefined)e.innerHTML=h;return e};
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+function card(title,tags,desc,grad,cta){
+const c=el("article","card");
+const t=el("div","thumb",esc(title));t.style.background="linear-gradient(135deg,"+grad+")";
+const b=el("div","body");
+b.append(el("h3","",esc(title)));
+const tg=el("div","tags");tags.split(" · ").forEach(x=>tg.append(el("span","",esc(x))));b.append(tg);
+if(desc)b.append(el("p","",esc(desc)));
+b.append(el("a","more",cta));b.lastChild.href="#";
+c.append(t,b);return c}
+let cur="new";
+function render(){
+const q=document.getElementById("q").value.trim().toLowerCase();
+const g=document.getElementById("gamegrid");g.innerHTML="";
+const list=q?[].concat(...Object.values(games)):games[cur];
+const seen=new Set();let n=0;
+list.forEach(([t,tags,d,gr])=>{if(seen.has(t))return;seen.add(t);
+if(q&&!(t+tags).toLowerCase().includes(q))return;
+g.append(card(t,tags,d,gr.split(",").join(","),"Xem thông tin và cửa hàng"));n++});
+document.getElementById("empty").classList.toggle("hidden",n>0)}
+function filter(){render()}
+document.getElementById("q").addEventListener("keydown",e=>{if(e.key==="Enter")render()});
+document.querySelectorAll(".tabs button").forEach(b=>b.addEventListener("click",()=>{
+cur=b.dataset.tab;document.getElementById("q").value="";
+document.querySelectorAll(".tabs button").forEach(x=>x.setAttribute("aria-selected",x===b));render()}));
+const mg=document.getElementById("moviegrid");
+movies.forEach(([t,tags,gr])=>mg.append(card(t,tags,"",gr,"Xem trailer và nơi xem hợp pháp")));
+render();
+</script>
+</body>
+</html>
